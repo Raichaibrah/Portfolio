@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raïcha Sanoussi | Portfolio</title>
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.7;
+        color: #333;
+        background-color: #fffdfc; 
+    }
+    a { text-decoration: none; color: #ff7f66; transition: 0.3s; }
+    a:hover { color: #e65c3c; }
+
+    header {
+        text-align: center;
+        padding: 60px 20px;
+        background: #fff6f2; 
+    }
+    header h1 {
+        font-size: 2.8em;
+        color: #ff7f66; 
+        margin-bottom: 10px;
+    }
+    header p {
+        font-size: 1.2em;
+        color: #7a5a5a;
+    }
+
+    nav {
+        background: #ffffff; 
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    nav a {
+        padding: 15px 25px;
+        color: #ff7f66;
+        font-weight: 500;
+    }
+    nav a:hover { color: #e65c3c; }
+
+    section {
+        max-width: 900px;
+        margin: 60px auto;
+        padding: 40px 20px;
+        background: #ffffff; 
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    }
+    h2 {
+        color: #ff7f66;
+        margin-bottom: 30px;
+        font-size: 2em;
+        text-align: center;
+    }
+    p { margin-bottom: 20px; }
+
+    .projects .project {
+        padding: 20px;
+        margin-bottom: 20px;
+        border-left: 4px solid #ff7f66; 
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .projects .project:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    .projects h3 { color: #e65c3c; margin-bottom: 10px; }
+    .projects p { color: #5a3b3b; }
+
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    .skill {
+        background: #fff6f2;
+        padding: 20px 25px;
+        border-radius: 12px;
+        min-width: 200px;
+        text-align: center;
+        color: #5a3b3b;
+        transition: transform 0.3s;
+    }
+    .skill:hover { transform: translateY(-3px); }
+
+    #cv, #contact {
+        text-align: center;
+    }
+    #cv a, #contact a {
+        display: inline-block;
+        margin: 10px;
+        padding: 10px 20px;
+        background: #ff7f66;
+        color: white;
+        border-radius: 20px;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+    #cv a:hover, #contact a:hover { background: #e65c3c; }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #fff6f2;
+        color: #7a5a5a;
+        font-size: 0.9em;
+        margin-top: 60px;
+    }
+
+    @media(max-width: 600px){
+        nav { flex-direction: column; }
+        .skills { flex-direction: column; }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Raïcha Ibrah Sanoussi</h1>
+    <p>Software Engineering Student | Internship July 2026</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#cv">CV</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        Hi! I'm Raïcha Ibrah Rahamane Sanoussi, a software engineering student at CentraleSupélec in France. 
+        I enjoy building web applications and exploring different technologies. 
+        I am looking for a 5-6 month internship starting July 2026 to gain practical experience, contribute to meaningful projects, 
+        and work with technologies such as Python, Django, React, and Node.js.
+    </p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="project">
+            <h3>EasyPrescription</h3>
+            <p>A web application allowing patients to submit medical prescriptions to pre-selected pharmacies. Developed backend using Python/Django and SQL database. Includes authentication and user dashboard.</p>
+            <p><strong>Tech Stack:</strong> Python, Django, SQL, HTML, CSS</p>
+            <p><a href="https://github.com/Raichaibrah/Easy-Prescription" target="_blank">View on GitHub</a></p>
+        </div>
+        <div class="project">
+            <h3>Netflics</h3>
+            <p>A recommendation engine based on user ratings. Implemented frontend with React and connected to recommendation backend logic.</p>
+            <p><strong>Tech Stack:</strong> React, Node.js, Python</p>
+            <p><a href="https://github.com/Raichaibrah/Netflics" target="_blank">View on GitHub</a></p>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="skill">
+            <h4>Languages</h4>
+            <p>Python, Java, JavaScript, HTML, CSS, SQL</p>
+        </div>
+        <div class="skill">
+            <h4>Frameworks / Tools</h4>
+            <p>Django, React, Node.js, Git</p>
+        </div>
+        <div class="skill">
+            <h4>Techniques</h4>
+            <p>OOP, Client/Server Architecture, Web Development, Collaborative Filtering</p>
+        </div>
+        <div class="skill">
+            <h4>Methods</h4>
+            <p>Agile, Teamwork, Rapid Prototyping</p>
+        </div>
+    </div>
+</section>
+
+<section id="cv">
+    <h2>CV / Resume</h2>
+    <p><a href="Raicha_Sanoussi_CV.pdf" target="_blank">Download my CV (PDF)</a></p>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>
+        Email: <a href="mailto:raicha.ibrahsanoussi@student-cs.fr">raicha.ibrahsanoussi@student-cs.fr</a><br>
+        LinkedIn: <a href="https://www.linkedin.com/in/ra%C3%AFcha-ibrah-sanoussi/" target="_blank">linkedin.com/in/raïcha-ibrah-sanoussi</a><br>
+        GitHub: <a href="https://github.com/Raichaibrah?tab=repositories" target="_blank">github.com/Raichaibrah</a>
+    </p>
+</section>
+
+<footer>
+    &copy; 2026 Raïcha Sanoussi. All rights reserved.
+</footer>
+
+</body>
+</html>
