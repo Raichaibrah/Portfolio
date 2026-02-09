@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Raïcha Sanoussi | Portfolio</title>
 
+<link rel="icon" type="image/png" href="favicon.png">
+
 <style>
 :root{
   --primary:#D96C5A;
@@ -18,6 +20,7 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0;}
+
 body{
   font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
   line-height:1.7;
@@ -40,7 +43,6 @@ header{
 header h1{
   font-size:3em;
   color:var(--primary);
-  letter-spacing:-0.5px;
 }
 header p{
   margin-top:10px;
@@ -82,7 +84,6 @@ h2{
   font-size:2.1em;
   color:var(--primary);
   margin-bottom:40px;
-  position:relative;
 }
 h2::after{
   content:"";
@@ -95,19 +96,17 @@ h2::after{
 }
 
 #about p{
-  line-height:1.7;
   margin-bottom:20px;
   color:var(--text-muted);
 }
-#about p strong{
-  color:var(--accent);
-}
+#about strong{color:var(--accent);}
 
 .projects .project{
   padding:25px;
   border-radius:14px;
   border:1px solid var(--border-soft);
   margin-bottom:25px;
+  background:#fff;
   transition:transform 0.3s, box-shadow 0.3s;
 }
 .projects .project:hover{
@@ -117,12 +116,10 @@ h2::after{
 .projects h3{
   color:var(--accent);
   margin-bottom:8px;
-  font-size:1.5em;
 }
 .projects .duration{
   font-size:0.9em;
   color:var(--text-muted);
-  margin-left:5px;
 }
 .projects p{
   color:var(--text-muted);
@@ -131,23 +128,38 @@ h2::after{
 
 .skills{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  grid-template-columns:repeat(3, 1fr);
   gap:25px;
+  justify-items:center;
 }
+
 .skill{
   background:var(--bg-soft);
   padding:25px;
   border-radius:16px;
   text-align:center;
   border:1px solid var(--border-soft);
-  transition:transform 0.3s;
+  width:100%;
+  max-width:260px;
 }
-.skill:hover{
-  transform:translateY(-4px);
+
+.skill:nth-child(4){
+  grid-column:2;
 }
-.skill h4{
-  color:var(--primary);
-  margin-bottom:10px;
+
+@media(max-width:900px){
+  .skills{
+    grid-template-columns:repeat(2, 1fr);
+  }
+  .skill:nth-child(4){
+    grid-column:auto;
+  }
+}
+
+@media(max-width:600px){
+  .skills{
+    grid-template-columns:1fr;
+  }
 }
 
 #cv,#contact{text-align:center;}
@@ -197,45 +209,78 @@ footer{
 
 <section id="about">
   <h2>About Me</h2>
-  <p>Hi! I'm <strong>Raïcha Ibrah Rahamane Sanoussi</strong>, an engineering student at <strong>CentraleSupélec</strong>, a leading French Grande École with a generalist engineering program.</p>
-
-  <p>My studies provide a broad foundation in engineering and computer science. I am particularly interested in software development and problem-solving across different domains. Through academic projects, I have gained hands-on experience with Python and exposure to web technologies such as Django, React, and Node.js.</p>
-
-  <p>I am motivated to learn new tools and technologies and adapt quickly to new technical environments. I value collaboration, attention to detail, and working in international team settings.</p>
-
-  <p>I am currently looking for a <strong>5-6 month internship starting in July 2026</strong> as part of my upcoming <strong>gap year (année de césure)</strong> to strengthen my technical foundations and gain practical experience in a professional environment.</p>
+  <p>
+    Hi! I'm <strong>Raïcha Ibrah Rahamane Sanoussi</strong>, an engineering student at
+    <strong>CentraleSupélec</strong>, a leading French Grande École with a generalist engineering program.
+  </p>
+  <p>
+    My studies provide a strong foundation in engineering and computer science, with a particular focus on
+    <strong>software development and problem-solving</strong>. I enjoy turning loosely defined problems into
+    clear, working solutions.
+  </p>
+  <p>
+    Through academic projects and hackathons, I have gained hands-on experience in
+    <strong>Python backend development</strong>, database management, and web architectures, as well as exposure to
+    frontend technologies such as React and Node.js.
+  </p>
+  <p>
+    I am curious, detail-oriented, and comfortable working in collaborative and international team environments.
+    I value clean code, continuous learning, and delivering functional solutions under time constraints.
+  </p>
+  <p>
+    I am currently seeking a <strong>5–6 month internship starting in July 2026</strong> as part of my upcoming
+    <strong>gap year (année de césure)</strong> to strengthen my technical skills and gain real-world software
+    engineering experience.
+  </p>
 </section>
 
 <section id="projects">
   <h2>Projects</h2>
   <div class="projects">
-    <div class="project">
-     <h3>EasyPrescription <span class="duration">(1-week academic hackathon-style project)</span></h3>
-<p><strong>Purpose:</strong> Build a web app allowing patients to submit prescriptions online and for doctors/pharmacists to view them.</p>
-<p><strong>What I did:</strong> Developed backend with Python/Django, managed SQL database, created web forms, and collaborated with teammates to deliver a working prototype and present it during the final demo.</p>
-<p><strong>Tech:</strong> Python, Django, SQL</p>
 
+    <div class="project">
+      <h3>EasyPrescription <span class="duration">(1-week academic hackathon)</span></h3>
+      <p><strong>Purpose:</strong> Web application allowing patients to submit prescriptions online and enabling
+      doctors and pharmacists to consult them.</p>
+      <p><strong>Role:</strong> Backend development with Python and Django, SQL database design, form handling, and
+      team coordination.</p>
+      <p><strong>Outcome:</strong> Functional prototype delivered and presented within one week.</p>
+      <p><strong>Tech:</strong> Python, Django, SQL</p>
       <p><a href="https://github.com/Raichaibrah/Easy-Prescription" target="_blank">View on GitHub</a></p>
     </div>
 
     <div class="project">
-      <h3>Netflics <span class="duration">(1-week academic hackathon-style project in collaboration with Theodo)</span></h3>
-<p><strong>Purpose:</strong> Build a simple recommendation system to help users discover movies based on their ratings.</p>
-<p><strong>What I did:</strong> Developed a prototype recommendation engine in Python, integrated frontend with React and backend with Node.js, managed user input and basic data processing, and worked in a team with Theodo mentors to deliver the prototype and present it during the final demo.</p>
-<p><strong>Tech:</strong> Python, Node.js, React</p>
-
+      <h3>Netflics <span class="duration">(1-week hackathon with Theodo)</span></h3>
+      <p><strong>Purpose:</strong> Simple recommendation system to help users discover movies based on ratings.</p>
+      <p><strong>Role:</strong> Recommendation engine in Python, integration of React frontend and Node.js backend,
+      and user data processing.</p>
+      <p><strong>Outcome:</strong> End-to-end prototype delivered under tight deadlines and presented during demo.</p>
+      <p><strong>Tech:</strong> Python, Node.js, React</p>
       <p><a href="https://github.com/Raichaibrah/Netflics" target="_blank">View on GitHub</a></p>
     </div>
+
   </div>
 </section>
 
 <section id="skills">
   <h2>Skills</h2>
   <div class="skills">
-    <div class="skill"><h4>Languages</h4><p>Python, Java, JavaScript, SQL</p></div>
-    <div class="skill"><h4>Frameworks</h4><p>Django, React, Node.js</p></div>
-    <div class="skill"><h4>Concepts</h4><p>OOP, Web Architecture</p></div>
-    <div class="skill"><h4>Methods</h4><p>Agile, Teamwork</p></div>
+    <div class="skill">
+      <h4>Strong</h4>
+      <p>Python, Django, SQL</p>
+    </div>
+    <div class="skill">
+      <h4>Familiar with</h4>
+      <p>Java, JavaScript, React, Node.js</p>
+    </div>
+    <div class="skill">
+      <h4>Concepts</h4>
+      <p>Object-Oriented Programming, Web Architecture</p>
+    </div>
+    <div class="skill">
+      <h4>Methods</h4>
+      <p>Agile methodology, Team collaboration</p>
+    </div>
   </div>
 </section>
 
