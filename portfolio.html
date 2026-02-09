@@ -18,12 +18,11 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0;}
-
 body{
   font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
   line-height:1.7;
   color:var(--text-main);
-  background:linear-gradient(180deg,#F7EFEA,#FDF9F7);
+  background:linear-gradient(180deg,var(--bg-main),var(--bg-soft));
 }
 
 a{
@@ -78,7 +77,6 @@ section{
   border-radius:20px;
   box-shadow:0 20px 40px rgba(0,0,0,0.04);
 }
-
 h2{
   text-align:center;
   font-size:2.1em;
@@ -96,6 +94,15 @@ h2::after{
   border-radius:2px;
 }
 
+#about p{
+  line-height:1.7;
+  margin-bottom:20px;
+  color:var(--text-muted);
+}
+#about p strong{
+  color:var(--accent);
+}
+
 .projects .project{
   padding:25px;
   border-radius:14px;
@@ -110,9 +117,16 @@ h2::after{
 .projects h3{
   color:var(--accent);
   margin-bottom:8px;
+  font-size:1.5em;
+}
+.projects .duration{
+  font-size:0.9em;
+  color:var(--text-muted);
+  margin-left:5px;
 }
 .projects p{
   color:var(--text-muted);
+  margin:8px 0;
 }
 
 .skills{
@@ -170,7 +184,7 @@ footer{
 
 <header>
   <h1>Raïcha Ibrah Sanoussi</h1>
-  <p>Software Engineering Student · Internship July 2026</p>
+  <p>Engineering Student · Internship July 2026</p>
 </header>
 
 <nav>
@@ -183,25 +197,33 @@ footer{
 
 <section id="about">
   <h2>About Me</h2>
-  <p>
-  Hi! I'm Raïcha Ibrah Rahamane Sanoussi, a software engineering student at CentraleSupélec in France. I enjoy building web applications and exploring different technologies. I am looking for a 5–6 month internship starting July 2026 to gain practical experience and work with technologies such as Python, Django, React, and Node.js.
-  </p>
+  <p>Hi! I'm <strong>Raïcha Ibrah Rahamane Sanoussi</strong>, an engineering student at <strong>CentraleSupélec</strong>, a leading French Grande École with a generalist engineering program.</p>
+
+  <p>My studies provide a broad foundation in engineering and computer science. I am particularly interested in software development and problem-solving across different domains. Through academic projects, I have gained hands-on experience with Python and exposure to web technologies such as Django, React, and Node.js.</p>
+
+  <p>I am motivated to learn new tools and technologies and adapt quickly to new technical environments. I value collaboration, attention to detail, and working in international team settings.</p>
+
+  <p>I am currently looking for a <strong>5-6 month internship starting in July 2026</strong> as part of my upcoming <strong>gap year (année de césure)</strong> to strengthen my technical foundations and gain practical experience in a professional environment.</p>
 </section>
 
 <section id="projects">
   <h2>Projects</h2>
   <div class="projects">
     <div class="project">
-      <h3>EasyPrescription</h3>
-      <p>Web app allowing patients to submit prescriptions to pharmacies.</p>
-      <p><strong>Tech:</strong> Python, Django, SQL</p>
+     <h3>EasyPrescription <span class="duration">(1-week academic hackathon-style project)</span></h3>
+<p><strong>Purpose:</strong> Build a web app allowing patients to submit prescriptions online and for doctors/pharmacists to view them.</p>
+<p><strong>What I did:</strong> Developed backend with Python/Django, managed SQL database, created web forms, and collaborated with teammates to deliver a working prototype and present it during the final demo.</p>
+<p><strong>Tech:</strong> Python, Django, SQL</p>
+
       <p><a href="https://github.com/Raichaibrah/Easy-Prescription" target="_blank">View on GitHub</a></p>
     </div>
 
     <div class="project">
-      <h3>Netflics</h3>
-      <p>Recommendation engine based on user ratings.</p>
-      <p><strong>Tech:</strong> React, Node.js, Python</p>
+      <h3>Netflics <span class="duration">(1-week academic hackathon-style project in collaboration with Theodo)</span></h3>
+<p><strong>Purpose:</strong> Build a simple recommendation system to help users discover movies based on their ratings.</p>
+<p><strong>What I did:</strong> Developed a prototype recommendation engine in Python, integrated frontend with React and backend with Node.js, managed user input and basic data processing, and worked in a team with Theodo mentors to deliver the prototype and present it during the final demo.</p>
+<p><strong>Tech:</strong> Python, Node.js, React</p>
+
       <p><a href="https://github.com/Raichaibrah/Netflics" target="_blank">View on GitHub</a></p>
     </div>
   </div>
