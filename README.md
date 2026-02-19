@@ -4,7 +4,7 @@ Welcome to the source for my personal portfolio website hosted at:
 
 https://raichaibrah.github.io/Portfolio/ :contentReference[oaicite:0]{index=0}
 
-I’m **Raïcha Ibrah Rahamane Sanoussi**, a software engineering student at CentraleSupélec in France, seeking a **5–6 month internship starting July 2026** to gain practical software engineering experience. :contentReference[oaicite:1]{index=1}
+I’m **Raïcha Ibrah Rahamane Sanoussi**, a software engineering student at CentraleSupélec in France, seeking a 5-6 month internship starting July 2026 to gain practical software engineering experience. :contentReference[oaicite:1]{index=1}
 
 ##  Quick Links
 
@@ -30,9 +30,8 @@ Recommendation engine built using Python, Node.js, and React. :contentReference[
 
 ##  About
 
-This repository contains the source for my portfolio — a static, responsive site showcasing my skills, projects, and contact information. Use it as a reference or template for your own developer portfolio!
+This repository contains the source for my portfolio. Use it as a reference or template for your own developer portfolio!
 
----
 
 © 2026 Raïcha Sanoussi :contentReference[oaicite:11]{index=11}
 
